@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BiPencil } from "react-icons/bi";
 import { addNote } from "../utils/data";
 import { useNavigate } from "react-router-dom";
-export default function Form() {
+export default function AddBookInput() {
   const [formData, setFormData] = useState({
     title: "",
     body: "",

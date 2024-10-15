@@ -11,6 +11,7 @@ import {
   BiArchiveIn,
   BiArchiveOut,
   BiArrowBack,
+  BiEdit,
   BiTrash,
 } from "react-icons/bi";
 
@@ -54,20 +55,19 @@ export default function DetailNotePage() {
               {note.body}
             </p>
             <div className="flex gap-4 absolute bottom-10 right-10">
-              <div>
-                <button>
-                  {note.archived ? (
-                    <BiArchiveIn size={30} color="teal" onClick={onArchive} />
-                  ) : (
-                    <BiArchiveOut size={30} color="teal" onClick={onArchive} />
-                  )}
-                </button>
-              </div>
-              <div>
-                <button>
-                  <BiTrash size={30} color="teal" onClick={onDelete} />
-                </button>
-              </div>
+              <button>
+                {note.archived ? (
+                  <BiArchiveIn size={30} color="teal" onClick={onArchive} />
+                ) : (
+                  <BiArchiveOut size={30} color="teal" onClick={onArchive} />
+                )}
+              </button>
+              <Link to={`/edit/${id}`}>
+                <BiEdit size={30} color="teal" />
+              </Link>
+              <button>
+                <BiTrash size={30} color="teal" onClick={onDelete} />
+              </button>
             </div>
           </div>
         ) : (

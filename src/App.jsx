@@ -6,6 +6,7 @@ import AddPage from "./pages/AddPage.jsx";
 import ArchivePage from "./pages/ArchivePage.jsx";
 import DetailNotePage from "./pages/DetailNotePage.jsx";
 import NoteFoundPage from "./pages/NotFoundPage.jsx";
+import EditPage from "./pages/EditPage.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/add" element={<AddPage />} />
           <Route path="/archive" element={<ArchivePage />} />
           <Route path="/note/:id" element={<DetailNotePage />} />
+          <Route path="/edit/:id" element={<EditPage />} />
           <Route path="/*" element={<NoteFoundPage />} />
         </Routes>
       </main>
